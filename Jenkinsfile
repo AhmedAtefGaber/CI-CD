@@ -1,5 +1,5 @@
 pipeline{
-statges{
+stages{
    /* 
  stage("Git cLone"){
     git credentialsId: 'ci-cd-repo-credentials', url: 'https://github.com/AhmedAtefGaber/CI-CD/'
