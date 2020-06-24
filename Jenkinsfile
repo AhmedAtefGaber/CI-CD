@@ -1,15 +1,13 @@
-pipeline{
- agent any
-stages{
+node{
    /* 
  stage("Git cLone"){
     git credentialsId: 'ci-cd-repo-credentials', url: 'https://github.com/AhmedAtefGaber/CI-CD/'
  }   
     */
  stage("maven clean build"){
-     steps {def mavenHome = tool name: "maven-3.6.3" , type: "maven"}
-     steps {def mavenCMD  = "${mavenHome}/bin/mvn"  }
-     steps {  sh "${mavenCMD} clean package" }
+   def mavenHome = tool name: "maven-3.6.3" , type: "maven"
+   def mavenCMD  = "${mavenHome}/bin/mvn"  
+   sh "${mavenCMD} clean package" 
  }    
     
   stage("build docker image"){
@@ -33,5 +31,4 @@ stages{
         */
     sh "kubectl apply -f springBootMongo.yml "  
   }
-}
 }
