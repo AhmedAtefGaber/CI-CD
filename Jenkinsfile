@@ -9,7 +9,7 @@ stages{
  stage("maven clean build"){
      def mavenHome = tool name: "maven-3.6.3" , type: "maven"
      def mavenCMD  = "${mavenHome}/bin/mvn"  
-     sh "${mavenCMD} clean package" 
+     step {  sh "${mavenCMD} clean package" }
  }    
     
   stage("build docker image"){
