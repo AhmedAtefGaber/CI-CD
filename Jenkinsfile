@@ -21,8 +21,9 @@ statges{
         }
       sh "docker push ahmedatefosman/sprint-boot-mongo "
   }
-  /*
+  
   stage("deploy on kubernetes cluster"){
+	/*
       kubernetesDeploy(
          configs: 'springBootMongo.yml',
          kubeconfigId: 'k8s_config',
