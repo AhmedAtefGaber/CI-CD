@@ -1,4 +1,5 @@
 pipeline{
+statges{
    /* 
  stage("Git cLone"){
     git credentialsId: 'ci-cd-repo-credentials', url: 'https://github.com/AhmedAtefGaber/CI-CD/'
@@ -30,4 +31,5 @@ pipeline{
         */
     sh "kubectl apply -f springBootMongo.yml "  
   }
+}
 }
