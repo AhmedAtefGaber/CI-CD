@@ -9,13 +9,23 @@ pipeline {
 						}
                             }
     
-          stage("maven clean build"){
+  /*        stage("maven clean build"){
 		          steps {
                            script {def mavenHome = tool name: "maven-3.6.3" , type: "maven"
                                    def mavenCMD  = "${mavenHome}/bin/mvn"}
                            sh "${mavenCMD} clean package"
                         }
                                      }
+*/
+
+
+
+          stage("maven clean build"){
+                          steps {
+ 					 sh 'mvn -B -DskipTests clean package'
+                        }
+                                     }
+
 
           stage("build docker image"){
 		          steps {
