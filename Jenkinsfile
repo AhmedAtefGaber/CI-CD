@@ -44,5 +44,5 @@ pipeline {
         */
                           sh "kubectl apply -f springBootMongo.yml "
 	                    }
-  }
+                                                  }
   }
