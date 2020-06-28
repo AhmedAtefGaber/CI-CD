@@ -5,7 +5,7 @@ pipeline {
 		   
 		  stage("Git cLone"){
 		          steps {
-                           git credentialsId: 'ci-cd-repo-credentials', url: 'https://github.com/AhmedAtefGaber/CI-CD/'
+                           git  'https://github.com/AhmedAtefGaber/CI-CD/'
 						}
                             }
     
