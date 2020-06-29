@@ -6,7 +6,7 @@ pipeline {
 		  stage("Git cLone"){
 		          steps {
                            git  'https://github.com/AhmedAtefGaber/CI-CD/'
-						}
+		   				}
                             }
     
   /*        stage("maven clean build"){
